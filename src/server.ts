@@ -36,6 +36,12 @@ import { Request, Response } from 'express';
       // validate the image url query
       const {image_url} = req.query;
 
+      const { token } = req.headers;
+
+      if (!token || token != "filter-token") {
+        return res.status(401).send({ success: false, message: 'Invalid token' });
+      }
+
       if (!image_url) {
         return res.status(400).send({ success: false, message: 'image url is required' });
       }
