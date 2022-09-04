@@ -8,6 +8,8 @@ A basic Ionic client web application which consumes the RestAPI Backend. [Covere
 2. [The RestAPI Backend](https://github.com/udacity/cloud-developer/tree/master/course-02/exercises/udacity-c2-restapi), a Node-Express server which can be deployed to a cloud service. [Covered in the course]
 3. [The Image Filtering Microservice](https://github.com/udacity/cloud-developer/tree/master/course-02/project/image-filter-starter-code), the final project for the course. It is a Node-Express application which runs a simple script to process images. [Your assignment]
 
+
+![Deployment Image](./deployment_screenshots/ebs-image-filter-deployment.png)
 ## Deployment URL
 [http://image-filter-dev2222.us-east-1.elasticbeanstalk.com](http://image-filter-dev2222.us-east-1.elasticbeanstalk.com)
 ## Tasks
@@ -35,14 +37,21 @@ Follow the process described in the course to `eb init` a new application and `e
 
 ## Stand Out (Optional)
 
+- sample request http://image-filter-dev2222.us-east-1.elasticbeanstalk.com/filteredimage/?image_url=https://media.wired.com/photos/621575377d11d746344b5a72/191:100/w_2287,h_1197,c_limit/Business_Person%20Working%20on%20Laptop_1302475706.jpg
+
 ### Refactor the course RESTapi
 
 If you're feeling up to it, refactor the course RESTapi to make a request to your newly provisioned image server.
+
+
 
 ### Authentication
 
 Prevent requests without valid authentication headers.
 > !!NOTE if you choose to submit this, make sure to add the token to the postman collection and export the postman collection file to your submission so we can review!
+
+- Added token authentication for request
+    - key : token , value : filter-token
 
 ### Custom Domain Name
 
