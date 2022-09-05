@@ -8,52 +8,25 @@ A basic Ionic client web application which consumes the RestAPI Backend. [Covere
 2. [The RestAPI Backend](https://github.com/udacity/cloud-developer/tree/master/course-02/exercises/udacity-c2-restapi), a Node-Express server which can be deployed to a cloud service. [Covered in the course]
 3. [The Image Filtering Microservice](https://github.com/udacity/cloud-developer/tree/master/course-02/project/image-filter-starter-code), the final project for the course. It is a Node-Express application which runs a simple script to process images. [Your assignment]
 
+## Github  Link 
 
-![Deployment Image](./deployment_screenshots/ebs-image-filter-deployment.png)
+   Github Link [https://github.com/honorezemagho/image-filter-ebs-deploy](https://github.com/honorezemagho/image-filter-ebs-deploy)
+
+
 ## Deployment URL
-[http://image-filter-dev2222.us-east-1.elasticbeanstalk.com](http://image-filter-dev2222.us-east-1.elasticbeanstalk.com)
-## Tasks
-
-### Setup Node Environment
-
-You'll need to create a new node server. Open a new terminal within the project directory and run:
-
-1. Initialize a new project: `npm i`
-2. run the development server with `npm run dev`
-
-### Create a new endpoint in the server.ts file
-
-The starter code has a task for you to complete an endpoint in `./src/server.ts` which uses query parameter to download an image from a public URL, filter the image, and return the result.
-
-We've included a few helper functions to handle some of these concepts and we're importing it for you at the top of the `./src/server.ts`  file.
-
-```typescript
-import {filterImageFromURL, deleteLocalFiles} from './util/util';
-```
-
+EBS deployment Url [http://image-filter-dev2222.us-east-1.elasticbeanstalk.com](http://image-filter-dev2222.us-east-1.elasticbeanstalk.com)
 ### Deploying your system
 
 Follow the process described in the course to `eb init` a new application and `eb create` a new environment to deploy your image-filter service! Don't forget you can use `eb deploy` to push changes.
 
-## Stand Out (Optional)
+![Deployment Image](./deployment_screenshots/aws-ebs-submission.png)
 
+## Stand Out (Optional)
 - sample request http://image-filter-dev2222.us-east-1.elasticbeanstalk.com/filteredimage/?image_url=https://media.wired.com/photos/621575377d11d746344b5a72/191:100/w_2287,h_1197,c_limit/Business_Person%20Working%20on%20Laptop_1302475706.jpg
 
-### Refactor the course RESTapi
-
-If you're feeling up to it, refactor the course RESTapi to make a request to your newly provisioned image server.
-
-
-
 ### Authentication
-
 Prevent requests without valid authentication headers.
 > !!NOTE if you choose to submit this, make sure to add the token to the postman collection and export the postman collection file to your submission so we can review!
 
 - Added token authentication for request
     - key : token , value : filter-token
-
-### Custom Domain Name
-
-Add your own domain name and have it point to the running services (try adding a subdomain name to point to the processing server)
-> !NOTE: Domain names are not included in AWS’ free tier and will incur a cost.
